@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1 class="flex justify-center font-bold text-2xl p-3"> ACTIVE PANELS </h1>
+<div class="mx-10 mb-10">
+
+    {% for i in product %}
+    {% if i.status == "Active" %}
+    <div class="flex justify-center mb-10">
+        <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-800 py-3">
+            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="/docs/images/blog/image-4.jpg" alt="">
+            <div class="flex flex-col justify-between p-4 leading-normal">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Solar panel {{i}}</h5>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{i.description}}</p>
+                <div class="p-5 "> 
+                    {% comment %} <a href="#" class="text-white p-3 bg-green-600 rounded-xl">Activate</a> {% endcomment %}
+                    <a href="#" class="text-white p-3 bg-red-600 rounded-xl">Disable</a>
+                    <a href="{% url 'description' i.id %}" class="text-white p-3 bg-blue-600 hover:bg-blue-700 rounded-xl">Click to view the details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor%}
+</div>
+<h1 class="flex justify-center font-bold text-2xl p-3"> IN-ACTIVE PANELS </h1>
+<div class="mx-10 mb-10">
+
+    {% for i in product %}
+    {% if i.status == "Inactive" %}
+    <div class="flex justify-center mb-10">
+        <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-800 py-3">
+            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="/docs/images/blog/image-4.jpg" alt="">
+            <div class="flex flex-col justify-between p-4 leading-normal">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Solar panel {{i}}</h5>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{i.description}}</p>
+                <div class="p-5 "> 
+                    <a href="#" class="text-white p-3 bg-green-600 rounded-xl">Activate</a>
+                    {% comment %} <a href="#" class="text-white p-3 bg-red-600 rounded-xl">Disable</a> {% endcomment %}
+                    <a href="{% url 'description' i.id %}" class="text-white p-3 bg-blue-600 hover:bg-blue-700 rounded-xl">Click to view the details</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    {% endif %}
+    {% endfor%}
+</div>
+{% endblock %}

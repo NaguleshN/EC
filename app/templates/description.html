@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content%}
+<hr>
+
+<div class="flex justify-center m-16">
+    <div class="w-full p-4 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+        <h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">Solar Panel {{product.name}}</h5>
+        <p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">{{product.description}}</p>
+        <p class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Model Number : {{product.model_number}}</p>
+        <p class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Voltage : {{product.nominal_voltage}}V</p>
+        <p class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Weight : {{product.product_weight}}kg</p>
+        <p class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Dimensions : {{product.dimensions_l}}cm X {{product.dimensions_b}}cm X {{product.dimensions_w}}cm</p>
+        <p class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Warranty : {{product.warranty}} yrs</p>
+    </div>
+</div> 
+
+    
+{% endblock %}
