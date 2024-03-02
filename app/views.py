@@ -23,3 +23,6 @@ def disable_state(request,id):
 
 def chart_disp(request):
     return render(request,"chart.html")
+
+def contact(request):
+    return render(request,"contact.html")

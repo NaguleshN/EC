@@ -10,5 +10,6 @@ urlpatterns = [
     path('enable/<int:id>', views.enable_state, name='enable_state'),
     path('disable/<int:id>', views.disable_state, name='disable_state'),
     path('chart/', views.chart_disp, name='chart_disp'),
+    path('contact/', views.contact, name='contact'),
     
 ]
