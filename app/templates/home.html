@@ -14,7 +14,7 @@
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{i.description}}</p>
                 <div class="p-5 "> 
                     {% comment %} <a href="#" class="text-white p-3 bg-green-600 rounded-xl">Activate</a> {% endcomment %}
-                    <a href="#" class="text-white p-3 bg-red-600 rounded-xl">Disable</a>
+                    <a href="{% url 'disable_state' i.id %}" class="text-white p-3 bg-red-600 rounded-xl">Disable</a>
                     <a href="{% url 'description' i.id %}" class="text-white p-3 bg-blue-600 hover:bg-blue-700 rounded-xl">Click to view the details</a>
                 </div>
             </div>
@@ -35,8 +35,7 @@
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Solar panel {{i}}</h5>
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{i.description}}</p>
                 <div class="p-5 "> 
-                    <a href="#" class="text-white p-3 bg-green-600 rounded-xl">Activate</a>
-                    {% comment %} <a href="#" class="text-white p-3 bg-red-600 rounded-xl">Disable</a> {% endcomment %}
+                    <a href="{% url 'enable_state' i.id %}" class="text-white p-3 bg-green-600 rounded-xl">Activate</a>
                     <a href="{% url 'description' i.id %}" class="text-white p-3 bg-blue-600 hover:bg-blue-700 rounded-xl">Click to view the details</a>
                 </div>
             </div>

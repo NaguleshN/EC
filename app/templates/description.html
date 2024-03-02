@@ -11,6 +11,9 @@
         <p class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Weight : {{product.product_weight}}kg</p>
         <p class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Dimensions : {{product.dimensions_l}}cm X {{product.dimensions_b}}cm X {{product.dimensions_w}}cm</p>
         <p class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Warranty : {{product.warranty}} yrs</p>
+        <div class="p-5 ">
+            <a href="{% url 'chart_disp' %}" class="text-white p-3 bg-blue-600 hover:bg-blue-700 rounded-xl">Click to get temperature/time Graph</a>
+        </div>
     </div>
 </div> 
 
